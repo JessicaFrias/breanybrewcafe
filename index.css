@@ -1,0 +1,480 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: rgb(223, 223, 223);
+    scroll-behavior: smooth;
+}
+
+/*Navigation bar*/
+
+.navigationbar {
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.navlist ul {
+    list-style: none;
+    text-align: right;
+    margin: 0 2% 0 0;
+}
+
+.navlist li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.logo-nav img {
+    width: 10%;
+    min-width: 10%;
+    max-width: 13%;
+    height: auto;
+    position: absolute;
+    margin: .5%;
+    animation-name: fromleft;
+    animation-duration: 1s;
+}
+
+@keyframes fromleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.navlist {
+    font-family: "Lemon Milk", Arial, Helvetica, sans-serif;
+    animation-name: fromtop;
+    animation-duration: 1s;
+}
+
+@keyframes fromtop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.navigationbar a:link, .navigationbar a:visited{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.navigationbar a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.navigationbar a:hover::after{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/*Background images for parallax scrolling*/
+
+.bgimage-1, .bgimage-2, .bgimage-3 {
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation-name: fadeIn;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.bgimage-1 {
+    background-image: url("bgimages/coffee4.jpg");
+    min-height: 100%;
+}
+
+.bgimage-2 {
+    background-image: url("bgimages/coffee5.jpg");
+    min-height: 40%;
+}
+
+.bgimage-3 {
+    background-image: url("bgimages/coffee6.jpg");
+    min-height: 40%;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Lemon Milk", Arial, Helvetica, sans-serif;
+    animation-name: fadeIn;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.title span.coffeeshop {
+    background-color: black;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+.title h2.subtitle {
+    padding: 20px;
+    color: black;
+}
+
+/*Landing page arrow button*/
+
+.arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    animation-name: godown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes godown {
+    0% {
+        top: 86%;
+    }
+    50% {
+        top: 91%;
+    }
+    100% {
+        top: 86%;
+    }
+}
+
+.arrow img {
+    width: 30px;
+}
+
+/*About section*/
+
+.about {
+    background-color: rgb(223, 223, 223);
+}
+
+.about-bbc {
+    text-align: center;
+    padding: 40px;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+.about-bbc h2 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.about-bbc img {
+    width: 10%;
+    min-width: 10%;
+    max-width: 15%;
+}
+
+/*Menu section*/
+
+
+.menu-section {
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    top: 40px;
+    padding: 30px;
+    text-align: center;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+.menu-section span.bbc-menu {
+    background-color: rgba(10, 10, 10, 0.8);
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.menu-section p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.menu-button-svg {
+    width: 5%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.openTemplate {
+    background-color: brown;
+    width: 5%;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.closeTemplate {
+    background-color: transparent;
+    width: 5%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.menu-btn li {
+    list-style-type: none;
+    display: inline;
+}
+
+.menu-hr {
+    width: 70%;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0, 0.2)
+}
+
+.menu {
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;  
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.menu-list {
+    background-color: rgb(223, 223, 223);
+    width: 20%;
+    padding: 30px;
+    height: 450px;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    z-index: 3;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 25px rgb(177, 173, 173);
+    border-radius: 5px;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    border-radius: 5px;
+}
+
+.flip-card-back {
+    background-color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    color: white;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;  
+    border-radius: 5px;
+}
+
+.menu-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu-food-title {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.flip-card-images {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/*Gallery section*/
+
+.gallery-hr {
+    width: 70%;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0, 0.2);
+}
+
+.gallery-container {
+    background-color:rgb(223, 223, 223);
+    padding-bottom: 50px;
+}
+
+.gallery {
+    position: relative;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+
+.gallery span.title-gallery {
+    background-color: rgba(10, 10, 10, 0.9);
+    padding: 25px;
+    letter-spacing: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.gallery h3 {
+    margin: 0;
+}
+
+.imagelist {
+    padding: 10px;
+}
+
+.sample {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+/*Location section*/
+
+.location-section {
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    top: 40px;
+    padding: 30px;
+    text-align: center;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+.location-section span.bbc-locations {
+    background-color: rgba(10, 10, 10, 0.8);
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.location-section p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+/*Location container*/
+
+.location-container {
+    padding-bottom: 50px;
+}
+
+.location {
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+location-list {
+    padding: 30px;
+    text-align: center;
+}
+
+.location1 {
+    width: 460px;
+    height: 320px;
+    padding: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.loc-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location1 p {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+
+/*Footer*/
+footer {
+    background-color: black;
+    color: rgb(204, 204, 204);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+

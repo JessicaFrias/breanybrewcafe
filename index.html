@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 480px)" href="mobiledevices.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 481px) and (max-width: 768px)" href="tablets.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 769px) and (max-width: 1024px)" href="others.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Beany Brew Cafe</title>
+</head>
+
+<body>
+    <header class="bgimage-1">
+        <div class="logo-nav">
+            <img src="logowordonly.png" alt="">
+        </div>
+        <div id="home" class="navigationbar">
+            <div class="navlist">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#ourMenu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#location">Locations</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="arrow">
+            <a href="#aboutUs"><img src="buttons/down-arrow.svg" alt="Arrow"></a>
+        </div>
+    </header>
+        <div class="landingpage">
+            <div class="title">
+                <span class="coffeeshop">BEANY BREW CAFE</span>
+                <h2 class="subtitle">비니 브루 카페</h2>
+            </div>
+        </div>
+
+        <div id="aboutUs" class="about">
+            <div class="about-bbc">
+                <img src="logoblack.png" alt="Logo">
+                <h2>ABOUT US</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus iusto hic dolor cumque! Quas explicabo quod deleniti, nesciunt ipsam odio laboriosam quia. Odio inventore asperiores ut expedita facere neque optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut rerum omnis placeat consectetur magnam corporis ab voluptates beatae sapiente non natus, quod, est vel assumenda odit, laudantium aperiam. Quaerat, repellat.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero excepturi autem quaerat officiis, modi voluptas rerum similique, consequatur perspiciatis cumque, non adipisci officia! Labore in repudiandae dolor praesentium voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum animi possimus dolores quisquam omnis vero blanditiis, maiores incidunt voluptatem unde placeat dolore esse dignissimos. Debitis repudiandae vel magnam adipisci deserunt?</p>
+            </div>
+        </div>
+
+        <div id="ourMenu" class="bgimage-2">
+            <div class="menu-section">
+                <h3><span class="bbc-menu">BBC | MENU</span></h3>
+                <p>Take a look and order now!</p>
+            </div>
+        </div>
+    
+        <section class="buttons">
+            <ul class="menu-btn">
+                <li><img id="openCoffees" src="buttons/coffee-beans.svg" alt="Coffees" onclick="bbcCoffees()" class="menu-button-svg" ></li>
+                <li><img id="openDrinks" src="buttons/meals.svg" alt="Snacks" onclick="bbcMeals()" class="menu-button-svg"></li>
+            </ul>
+
+            <script type="text/javascript">
+
+                /*Onload, hide the Meals div*/
+                window.onload = function() {
+                    document.getElementById("meals-bbc").style.display = "none";
+                }
+                /*On click, show the menu for coffees*/
+                function bbcCoffees() {
+                    document.getElementById("coffees-bbc").style.display = "block";
+                    document.getElementById("meals-bbc").style.display = "none";
+                    document.getElementById("openCoffees").className = "openTemplate";
+                    document.getElementById("openDrinks").className = "closeTemplate";
+                }
+                /*On click, show the menu for meals*/
+                function bbcMeals() {
+                    document.getElementById("meals-bbc").style.display = "block";
+                    document.getElementById("coffees-bbc").style.display = "none";
+                    document.getElementById("openCoffees").className = "closeTemplate";
+                    document.getElementById("openDrinks").className = "openTemplate";
+                }
+            </script>
+        </section>
+        <hr class="menu-hr">
+
+    <!--BBC COFFEES-->
+
+    <div id="coffees-bbc">
+
+        <section class="menu">
+            <div class="menu-list">
+            
+            <!--Card 1-->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="coffees/Flat White Coffee.jpg" alt="Flat White Coffee" class="flip-card-images">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="menu-details">
+                            <h3 class="menu-food-title">Flat White Coffee</h3>
+                            <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h4 class="menu-food-price">₱</h4>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!--Card 2-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/Frappuccino.jpg" alt="Frappuccino" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Frappuccino</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 3-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/iced latte.jpg" alt="Iced Latte" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Iced Latte</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 4-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/salted caramel coffee.jpg" alt="Salted Caramel Coffee" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Salted Caramel Coffee</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 5-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/Dark roast coffee.jpg" alt="Dark Roasted Coffee" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Dark Roast Coffee</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 6-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/Cafe mocha.jpg" alt="Cafe Mocha" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Cafe Mocha</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 7-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/brewed coffee.jpg" alt="Brewed Coffee" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Brewed Coffee</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 8-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="coffees/Cold brewed.jpg" alt="Cold Brewed Coffee" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Cold Brewed Coffee</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!--BBC MEALS-->
+    <div id="meals-bbc">
+
+        <section class="menu">
+            <div class="menu-list">
+            
+            <!--Card 1-->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="meals/croissant.jpg" alt="Croissant" class="flip-card-images">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="menu-details">
+                            <h3 class="menu-food-title">Croissant</h3>
+                            <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h4 class="menu-food-price">₱</h4>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 2-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/pancake.jpg" alt="Pancake" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Pancake</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 3-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/muffin.jpg" alt="Muffin" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Muffin</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 4-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/waffle.jpg" alt="Waffle" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Waffle</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 5-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/donuts.jpg" alt="Donuts" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Donuts</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 6-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/black-forest-cake.jpg" alt="Black Forest Cake" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Black Forest Cake</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 7-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/grilled-cheese.jpg" alt="Grilled Cheese Sandwich" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Grilled Cheese Sandwich</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 8-->
+            <div class="menu-list">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="meals/healthy-sandwich-burger.jpg" alt="Healthy Sandwich Burger" class="flip-card-images">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="menu-details">
+                                <h3 class="menu-food-title">Healthy Sandwich Burger</h3>
+                                <p class="menu-food-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="menu-food-price">₱</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>
+
+    <!--Gallery section-->
+    
+    <div id="gallery" class="gallery-container">
+        <hr class="gallery-hr">
+            <div class="gallery">
+                <h3><span class="title-gallery">GALLERY</span></h3>
+            </div>
+            <div class="images">
+                <div class="imagelist">
+                    <img src="gallery/sample1.jpg" alt="Sample 1" class="sample">
+                    <img src="gallery/sample2.jpg" alt="Sample 2" class="sample">
+                    <img src="gallery/sample3.jpg" alt="Sample 3" class="sample">
+                    <img src="gallery/sample4.jpg" alt="Sample 4" class="sample">
+                    <img src="gallery/sample5.jpg" alt="Sample 5" class="sample">
+                    <img src="gallery/sample6.jpg" alt="Sample 6" class="sample">
+                    <img src="gallery/sample7.jpg" alt="Sample 7" class="sample">
+                    <img src="gallery/sample8.jpg" alt="Sample 8" class="sample">
+                    <img src="gallery/sample9.jpg" alt="Sample 9" class="sample">
+                    <img src="gallery/sample10.jpg" alt="Sample 10" class="sample">
+                    <img src="gallery/sample11.jpg" alt="Sample 11" class="sample">
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript">
+        /*For Gallery Slideshow*/
+        var imageIndex = 0;
+        slideshow();
+
+        function slideshow() {
+            var i;
+            var x = document.getElementsByClassName("sample");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+            imageIndex++;
+            if (imageIndex > x.length) {
+                imageIndex = 1
+            }
+            x[imageIndex - 1].style.display = "block";
+            setTimeout(slideshow, 2000);
+        }   
+    </script>
+
+    <div  id="location" class="bgimage-3">
+            <div class="location-section">
+                <h3><span class="bbc-locations">BBC | LOCATIONS</span></h3>
+                <p>Hurry and go to the nearest branch!</p>
+            </div>
+    </div>
+
+    <div class="location-container">
+        <section class="location">
+            <div class="location-list">
+                <div class="location1">
+                    <p>Quezon City</p>
+                    <img src="loc/Quezon City.jpg" alt="BBC - Quezon City" class="loc-image">
+                </div>
+            </div>
+
+            <div class="location-list">
+                <div class="location1">
+                    <p>Manila</p>
+                    <img src="loc/Manila.jpg" alt="BBC - Manila" class="loc-image">
+                </div>
+            </div>
+
+            <div class="location-list">
+                <div class="location1">
+                    <p>Pasig</p>
+                    <img src="loc/Pasig.jpg" alt="BBC - Pasig" class="loc-image">
+                </div>
+            </div>
+
+            <div class="location-list">
+                <div class="location1">
+                    <p>Makati</p>
+                    <img src="loc/Makati.jpg" alt="BBC - Makati" class="loc-image">
+                </div>
+            </div>
+
+            <div class="location-list">
+                <div class="location1">
+                    <p>Tagaytay</p>
+                    <img src="loc/Tagaytay.jpg" alt="BBC - Tagaytay" class="loc-image">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright © 2020 | Beany Brew Cafe</p>
+    </footer>
+    
+</body>
+</html>
