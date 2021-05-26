@@ -45,7 +45,7 @@ body, html {
 }
 
 .navlist {
-    font-family: "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-family: "Lemon Milk Light", Arial, Helvetica, sans-serif;
     animation-name: fromtop;
     animation-duration: 1s;
 }
@@ -131,7 +131,7 @@ body, html {
     width: 100%;
     text-align: center;
     color: white;
-    font-family: "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-family: "Lemon Milk Light", Arial, Helvetica, sans-serif;
     animation-name: fadeIn;
     animation-duration: .2s;
     animation-timing-function: ease-in-out;
@@ -155,7 +155,7 @@ body, html {
 .arrow {
     position: absolute;
     top: 90%;
-    left: 50%;
+    left: 49%;
     animation-name: godown;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -306,7 +306,7 @@ body, html {
     border-radius: 5px;
 }
 
-.flip-card:hover .flip-card-inner{
+.flip-card:hover .flip-card-inner, .flip-card:active .flip-card-inner{
     transform: rotateY(180deg);
 }
 

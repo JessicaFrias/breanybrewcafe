@@ -12,7 +12,20 @@
     max-width: 25%;
 }
 
+.arrow {
+    left: 48%;
+    animation: none !important;
+}
+
 /*Menu section*/
+
+.bgimage-1, .bgimage-2, .bgimage-3 {
+    background-attachment: scroll;
+}
+
+.bgimage-1 {
+    width: 100%;
+}
 
 .bgimage-2, .bgimage-3 {
     min-height: 20%;
